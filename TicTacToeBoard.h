@@ -1,6 +1,8 @@
 #ifndef _TICTACTOEBOARD_H_
 #define _TICTACTOEBOARD_H_
 
+#include <iostream> 
+
 const static int BOARDSIZE = 3;
 
 enum Piece
@@ -20,6 +22,9 @@ class TicTacToeBoard
     private:
         Piece board[BOARDSIZE][BOARDSIZE];
         Piece turn;
+        int piecesPlaced;
+        bool gameOver;
+        bool boardFilled;
 
     public:
         //Constructor sets an empty board and specifies it is X's turn first
